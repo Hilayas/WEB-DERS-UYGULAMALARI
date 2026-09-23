@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kampüs Etkinlikleri - Etkinlik Güncelle</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Ana Sayfa</a> | 
+            <a href="etkinlikler.html">Etkinlikler</a> | 
+            <a href="etkinlik-ekle.html">Etkinlik Ekle</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Etkinlik Güncelle</h1>
+
+        <form action="#" method="POST">
+            <p>
+                <label for="etkinlikAdi">Etkinlik Adı:</label><br>
+                <input type="text" id="etkinlikAdi" name="etkinlikAdi" value="Kariyer Günleri 2026" required>
+            </p>
+
+            <p>
+                <label for="kategori">Kategori:</label><br>
+                <select id="kategori" name="kategori" required>
+                    <option value="seminer" selected>Seminer</option>
+                    <option value="atolye">Atölye</option>
+                    <option value="konferans">Konferans</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="tarih">Tarih:</label><br>
+                <input type="date" id="tarih" name="tarih" value="2026-10-12" required>
+            </p>
+
+            <p>
+                <label for="saat">Saat:</label><br>
+                <input type="time" id="saat" name="saat" value="14:00" required>
+            </p>
+
+            <p>
+                <label for="yer">Yer:</label><br>
+                <input type="text" id="yer" name="yer" value="A Blok Konferans Salonu" required>
+            </p>
+
+            <p>
+                <label for="aciklama">Açıklama:</label><br>
+                <textarea id="aciklama" name="aciklama" rows="4" cols="40" required>Sektör liderleriyle buluşma fırsatı ve kariyer panelleri.</textarea>
+            </p>
+
+            <p>
+                <button type="submit">Güncelle</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Hilal Aslan - 2026</p>
+    </footer>
+</body>
+</html>
+

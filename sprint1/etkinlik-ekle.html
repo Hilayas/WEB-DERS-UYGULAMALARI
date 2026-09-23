@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kampüs Etkinlikleri - Etkinlik Ekle</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Ana Sayfa</a> | 
+            <a href="etkinlikler.html">Etkinlikler</a> | 
+            <a href="etkinlik-ekle.html">Etkinlik Ekle</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Yeni Etkinlik Ekle</h1>
+
+        <form action="#" method="POST">
+            <p>
+                <label for="etkinlikAdi">Etkinlik Adı:</label><br>
+                <input type="text" id="etkinlikAdi" name="etkinlikAdi" required>
+            </p>
+
+            <p>
+                <label for="kategori">Kategori:</label><br>
+                <select id="kategori" name="kategori" required>
+                    <option value="">Seçiniz...</option>
+                    <option value="seminer">Seminer</option>
+                    <option value="atolye">Atölye</option>
+                    <option value="konferans">Konferans</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="tarih">Tarih:</label><br>
+                <input type="date" id="tarih" name="tarih" required>
+            </p>
+
+            <p>
+                <label for="saat">Saat:</label><br>
+                <input type="time" id="saat" name="saat" required>
+            </p>
+
+            <p>
+                <label for="yer">Yer:</label><br>
+                <input type="text" id="yer" name="yer" required>
+            </p>
+
+            <p>
+                <label for="aciklama">Açıklama:</label><br>
+                <textarea id="aciklama" name="aciklama" rows="4" cols="40" required></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Kaydet</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Hilal Aslan - 2026</p>
+    </footer>
+</body>
+</html>
