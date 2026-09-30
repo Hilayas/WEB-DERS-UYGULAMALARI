@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Ekle - Kampüs Etkinlikleri</title>
+    <link rel="stylesheet" href="css/2211011066.css">
+</head>
+<body>
+    <header>
+        <h1>Kampüs Etkinlikleri</h1>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="etkinlik-ekle.html">Ekle</a>
+            <a href="etkinlik-guncelle.html">Güncelle</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Etkinlik Ekle</h2>
+
+        <form action="#" method="post">
+            <div class="form-grup">
+                <label for="ad">Etkinlik adı</label>
+                <input type="text" id="ad" name="ad" required placeholder="Etkinlik adını giriniz">
+            </div>
+
+            <div class="form-grup">
+                <label for="kategori">Kategori</label>
+                <select id="kategori" name="kategori" required>
+                    <option value="">Seçiniz ▾</option>
+                    <option value="seminer">Seminer</option>
+                    <option value="atolye">Atölye</option>
+                    <option value="soylesi">Söyleşi</option>
+                </select>
+            </div>
+
+            <div class="form-grup">
+                <label for="tarih">Tarih</label>
+                <input type="date" id="tarih" name="tarih" required>
+            </div>
+
+            <div class="form-grup">
+                <label for="aciklama">Açıklama</label>
+                <textarea id="aciklama" name="aciklama" rows="4" placeholder="Etkinlik açıklaması..."></textarea>
+            </div>
+
+            <button type="submit">Kaydet</button>
+        </form>
+    </main>
+
+    <footer style="margin-top: 2rem; border-top: 1px solid #ccc; padding-top: 1rem;">
+        <p>Hilal Aslan - 2211011066</p>
+    </footer>
+</body>
+</html>
