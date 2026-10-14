@@ -1,0 +1,181 @@
+    /* Adınız Soyadınız 2211011066 */
+    :root {
+    --no: 2211011066;
+    --ton: 146; /* 2211011066 % 360 = 146 */
+    --renk-ana: hsl(var(--ton), 65%, 38%);
+    --renk-zemin: hsl(var(--ton), 30%, 97%);
+    --renk-beyaz: #ffffff;
+    --renk-hata: #d32f2f;
+    --font: "Courier New", Courier, monospace;
+    --bosluk-m: 1rem;
+    --kose: 8px;
+    }
+
+    /* Genel Sıfırlama ve Gövde */
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    font-family: var(--font);
+    background-color: var(--renk-zemin);
+    color: #222;
+    line-height: 1.5;
+    padding: var(--bosluk-m);
+    }
+
+    /* Başlık ve Menü */
+    header {
+    margin-bottom: var(--bosluk-m);
+    }
+
+    header h1 {
+    color: var(--renk-ana);
+    margin-bottom: 0.5rem;
+    }
+
+    nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--bosluk-m);
+    }
+
+    nav a {
+    text-decoration: none;
+    color: var(--renk-ana);
+    background-color: var(--renk-beyaz);
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--kose);
+    border: 1px solid var(--renk-ana);
+    display: inline-block;
+    min-height: 44px; /* Parmakla rahat basılsın diye */
+    display: inline-flex;
+    align-items: center;
+    }
+
+    nav a:hover {
+    background-color: var(--renk-ana);
+    color: var(--renk-beyaz);
+    }
+
+    /* Kart Yapısı (Grid) */
+    /* Varsayılan: Telefon (Tek sütun) */
+    .etkinlik-listesi {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--bosluk-m);
+    margin-top: var(--bosluk-m);
+    }
+
+    .kart {
+    background: var(--renk-beyaz);
+    border: 1px solid hsl(var(--ton), 20%, 85%);
+    border-radius: var(--kose);
+    padding: var(--bosluk-m);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .kart h3 {
+    color: var(--renk-ana);
+    margin-bottom: 0.5rem;
+    }
+
+    .kart a {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: var(--renk-ana);
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+    /* Formlar */
+    form {
+    background: var(--renk-beyaz);
+    padding: var(--bosluk-m);
+    border-radius: var(--kose);
+    max-width: 500px;
+    }
+
+    .form-grup {
+    margin-bottom: 1rem;
+    }
+
+    label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    }
+
+    input, select, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    }
+
+    /* Hatalı boş bırakılan zorunlu alan kırmızı görünsün */
+    input:invalid, select:invalid, textarea:invalid {
+    border-color: var(--renk-hata);
+    }
+
+    button {
+    background-color: var(--renk-ana);
+    color: var(--renk-beyaz);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--kose);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 44px;
+    }
+
+    /* Detay Sayfası: Afiş ve Künye */
+    .detay-konteyner {
+    display: flex;
+    flex-direction: column; /* Telefonda alt alta */
+    gap: var(--bosluk-m);
+    background: var(--renk-beyaz);
+    padding: var(--bosluk-m);
+    border-radius: var(--kose);
+    }
+
+    .detay-konteyner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--kose);
+    }
+
+    dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    }
+
+    dt {
+    font-weight: bold;
+    color: var(--renk-ana);
+    }
+
+    /* BİLGİSAYAR / GENİŞ EKRAN (Responsive) */
+    @media (min-width: 768px) {
+    /* etkinlikler.html için 3 sütun */
+    .etkinlik-listesi.uc-sutun {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* index.html için 2 sütun */
+    .etkinlik-listesi.iki-sutun {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Detay sayfası: Afiş solda, künye sağda yan yana */
+    .detay-konteyner {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    }
